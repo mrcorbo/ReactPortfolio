@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
@@ -14,8 +15,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main className="bg-emerald-900 text-gray-300">
+        <section>
+          <nav className='py-5 flex justify-between'>
+            <h1 className='text-l'>Corbo Customs</h1>
+            <ul className='flex'>
+              <li></li>
+              <li className='hover:text-xl'><a href='#about'>About</a></li>
+              <li className='hover:text-xl'><a href='#projects'>Projects</a></li>
+              <li className='hover:text-xl'><a href='#contact'>Contact</a></li>
+            </ul>
+          </nav>
+          
 
+        </section>
       </main>
     </>
   )
