@@ -1,32 +1,27 @@
 import React from "react";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Nav from './Nav'
 import Home from './Home'
+import About from './About'
 import Header from './Header'
 import Contact from './Contact'
+import Projects from './Projects'
+import Resume from './Resume'
+
 function App() {
   return (
-    <ApolloProvider client={client}>
       <Router>
         <>
-          <NavBar />
+          <Nav/>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/LogIn" element={<LogIn />} />
-            <Route path="/SignUp" element={<SignUp />} />
-            <Route path="/SearchOrgs" element={<SearchOrgs />} />
-            <Route path="/SavedOrgs" element={<SavedOrgs />} />
-            <Route path="/Story" element={<Story />} />
+            <Route path="/About" element={<About />} />
             <Route path="/Contact" element={<Contact />} />
-            <Route path="/Cart" element={<Cart />} />
+            <Route path="/Header" element={<Header />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Resume" element={<Resume />} />
+            <Route path="/Contact" element={<Contact />} />=
             {/* <Route 
                 path="/"  <<< put path here for new route 
                 element={<element/>} <<< put element here for new route 
@@ -34,7 +29,6 @@ function App() {
           </Routes>
         </>
       </Router>
-    </ApolloProvider>
   );
 }
 
